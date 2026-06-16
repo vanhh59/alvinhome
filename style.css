@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  color-scheme: light;
+  color: #111827;
+  background: #f8fafc;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  line-height: 1.65;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #fff6fb 0%, #f6f2ff 48%, #ffffff 100%);
+}
+
+.fade-in,
+.slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: appear 0.85s ease-out forwards;
+}
+
+.slide-up {
+  animation-name: slideUp;
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.75);
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.topbar-info span {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.topbar-info a {
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.topbar-info a:hover {
+  color: #d6336c;
+}
+
+.topbar-actions {
+  gap: 0.75rem;
+}
+
+.topbar-link,
+.social-link {
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.social-link {
+  padding: 0.35rem 0.75rem;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.social-link:hover {
+  color: #d6336c;
+  border-color: rgba(214, 51, 108, 0.25);
+  background: rgba(255, 255, 255, 1);
+}
+
+.topbar-link:hover {
+  color: #d6336c;
+}
+
+.topbar-cta {
+  padding: 0.45rem 1rem;
+  font-size: 0.92rem;
+}
+
+.navbar {
+  padding: 1rem 0;
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.55);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  letter-spacing: 0.12em;
+  color: #d6336c !important;
+}
+
+.navbar-nav .nav-link {
+  color: #475569 !important;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #d6336c !important;
+}
+
+.navbar-toggler {
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  background: rgba(15, 23, 42, 0.05);
+  border-radius: 999px;
+  transition: background 0.25s ease;
+}
+
+.navbar-toggler:hover {
+  background: rgba(15, 23, 42, 0.1);
+}
+
+.navbar-toggler-icon {
+  position: relative;
+  display: inline-block;
+  width: 1.4rem;
+  height: 0.18rem;
+  background-color: #0f172a;
+  transition: transform 0.35s ease, background-color 0.35s ease;
+  background-image: none !important;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 1.4rem;
+  height: 0.18rem;
+  background-color: #0f172a;
+  transition: transform 0.35s ease, top 0.35s ease;
+}
+
+.navbar-toggler-icon::before {
+  top: -0.42rem;
+}
+
+.navbar-toggler-icon::after {
+  top: 0.42rem;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+  background-color: transparent;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.btn-danger,
+.btn-danger:hover,
+.btn-danger:focus {
+  background-image: linear-gradient(135deg, #d6336c 0%, #f43f5e 100%);
+  border: none;
+  box-shadow: 0 18px 40px rgba(214, 51, 108, 0.18);
+}
+
+.btn-outline-dark {
+  border-color: rgba(15, 23, 42, 0.12);
+  color: #0f172a;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-outline-dark:hover {
+  background: rgba(15, 23, 42, 0.05);
+  color: #0f172a;
+}
+
+.btn-danger {
+  animation: pulse 4.2s ease-in-out infinite;
+}
+
+.btn-danger:hover,
+.btn-danger:focus {
+  transform: translateY(-1px);
+}
+
+.hero {
+  padding: 100px 0 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.hero::before {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 115, 180, 0.35), transparent 55%);
+  top: -80px;
+  left: -60px;
+  filter: blur(3px);
+  animation: float 8s ease-in-out infinite;
+}
+
+.hero::after {
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.25), transparent 55%);
+  bottom: -70px;
+  right: -40px;
+  filter: blur(3px);
+  animation: float 9.5s ease-in-out infinite reverse;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 4vw, 4.75rem);
+  line-height: 0.95;
+  margin-bottom: 0.8rem;
+}
+
+.hero h2 {
+  font-size: clamp(1.75rem, 2.3vw, 2.5rem);
+  color: #d6336c;
+}
+
+.hero .lead {
+  max-width: 560px;
+  color: #475569;
+  font-size: 1.05rem;
+}
+
+.hero img {
+  border-radius: 2rem;
+  box-shadow: 0 40px 90px rgba(15, 23, 42, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.text-highlight {
+  background: linear-gradient(90deg, #f43f5e, #8b5cf6, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  animation: glow 2.4s ease-in-out infinite;
+}
+
+.letter-spacing-2 {
+  letter-spacing: 0.18em;
+}
+
+.rooms,
+.amenities,
+.gallery,
+.reviews,
+.cta,
+.footer {
+  position: relative;
+}
+
+.rooms {
+  padding-top: 80px;
+}
+
+.room-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 28px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 24px 45px rgba(15, 23, 42, 0.08);
+}
+
+.room-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(214, 51, 108, 0.22);
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.12);
+}
+
+.room-card img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.room-card:hover img {
+  transform: scale(1.04);
+}
+
+.room-card h5 {
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.room-card p {
+  color: #6b7280;
+}
+
+.price {
+  color: #d6336c;
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.amenities {
+  background: linear-gradient(180deg, rgba(255, 241, 245, 0.85), rgba(255, 255, 255, 0.95));
+  padding: 80px 0;
+}
+
+.feature-box {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: 0 24px 45px rgba(15, 23, 42, 0.06);
+  border-radius: 28px;
+  padding: 2.5rem 1.5rem;
+  min-height: 260px;
+}
+
+.feature-box h5 {
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.gallery {
+  padding: 80px 0;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  border-radius: 2rem;
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+.reviews {
+  padding: 80px 0;
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  border-radius: 28px;
+  padding: 2.5rem;
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.06);
+}
+
+.review-card h5 {
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.review-card p {
+  color: #475569;
+  margin-bottom: 1.25rem;
+}
+
+.cta {
+  background: linear-gradient(135deg, #d6336c 0%, #f43f5e 100%);
+  color: #ffffff;
+  padding: 80px 0;
+}
+
+.cta h2 {
+  color: #ffffff;
+}
+
+.footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 80px 0;
+}
+
+.footer h4 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.footer p {
+  margin-bottom: 0.5rem;
+  color: #cbd5e1;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding-top: 70px;
+  }
+
+  .hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .room-card img,
+  .gallery-img {
+    height: 240px;
+  }
+
+  .navbar {
+    padding: 0.75rem 0;
+  }
+
+  .navbar-toggler {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .navbar-nav {
+    margin-top: 1rem;
+  }
+
+  .hero::before,
+  .hero::after {
+    display: none;
+  }
+}

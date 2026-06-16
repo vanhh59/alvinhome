@@ -4,472 +4,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ChillStay Homestay - kỳ nghỉ riêng tư dành cho cặp đôi với phòng đẹp và tiện nghi cao cấp.">
 
     <title>ChillStay Homestay</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-    <!-- HEADER -->
+    <div class="topbar">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
+            <div class="topbar-info text-center text-md-start">
+                <span>📍 Đà Lạt, Lâm Đồng</span>
+                <span>📞 <a href="tel:0909999999">0909 999 999</a></span>
+            </div>
+            <div class="topbar-actions d-flex flex-wrap gap-2 justify-content-center">
+                <a href="#contact" class="topbar-link social-link">Liên hệ</a>
+                <a href="https://www.instagram.com/yourprofile" class="topbar-link social-link" target="_blank" rel="noreferrer">Instagram</a>
+                <a href="https://www.tiktok.com/@yourprofile" class="topbar-link social-link" target="_blank" rel="noreferrer">TikTok</a>
+                <a href="https://zalo.me/0909999999" class="topbar-cta btn btn-sm btn-danger" target="_blank" rel="noreferrer">Chat Zalo</a>
+            </div>
+        </div>
+    </div>
     <header>
-        <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
+        <nav class="navbar navbar-expand-lg">
             <div class="container">
+                <a class="navbar-brand fw-bold" href="#home">ChillStay</a>
 
-                <a class="navbar-brand fw-bold" href="#">
-                    ChillStay
-                </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-
                 </button>
 
                 <div class="collapse navbar-collapse" id="menu">
-
-                    <ul class="navbar-nav mx-auto">
-
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Trang chủ
-                            </a>
+                            <a class="nav-link active" aria-current="page" href="#home">Trang chủ</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Phòng
-                            </a>
+                            <a class="nav-link" href="#rooms">Phòng</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Tiện nghi
-                            </a>
+                            <a class="nav-link" href="#amenities">Tiện nghi</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Liên hệ
-                            </a>
+                            <a class="nav-link" href="#contact">Liên hệ</a>
                         </li>
-
                     </ul>
-
-                    <a href="#" class="btn btn-danger">
-                        Đặt phòng
-                    </a>
-
+                    <a href="#booking" class="btn btn-danger">Đặt phòng</a>
                 </div>
-
             </div>
         </nav>
     </header>
 
-    <!-- HERO -->
-    <section>
-        <section class="hero">
-
+    <main>
+        <section id="home" class="hero fade-in" data-aos="fade-in" data-aos-duration="900">
             <div class="container">
-
-                <div class="row align-items-center">
-
-                    <div class="col-lg-6">
-
-                        <h1 class="display-3 fw-bold">
-                            Chill hết nấc
-                        </h1>
-
-                        <h2 class="text-danger fw-bold">
-                            Yêu cực chất
-                        </h2>
-
-                        <p class="lead mt-4">
-                            Homestay dành riêng cho các cặp đôi muốn
-                            có một kỳ nghỉ thật đáng nhớ.
-                        </p>
-
-                        <div class="mt-4">
-
-                            <a href="#" class="btn btn-danger me-2">
-                                Đặt qua Zalo
-                            </a>
-
-                            <a href="#" class="btn btn-outline-dark">
-                                Gọi ngay
-                            </a>
-
+                <div class="row align-items-center gy-5">
+                    <div class="col-lg-6 slide-up" style="animation-delay: 0.1s;" data-aos="fade-right" data-aos-duration="900" data-aos-delay="120">
+                        <span class="text-danger fw-bold text-uppercase letter-spacing-2">Homestay dành cho couple</span>
+                        <h1 class="display-3 fw-bold mt-3">Trải nghiệm <span class="text-highlight">ChillStay cực chất</span> cho hai bạn</h1>
+                        <p class="lead mt-4">Không gian ấm áp, thoải mái và đầy cảm hứng để tạo nên một kỳ nghỉ lãng mạn khó quên.</p>
+                        <div class="d-flex flex-wrap gap-3 mt-5">
+                            <a href="#booking" class="btn btn-danger btn-lg">Đặt phòng ngay</a>
+                            <a href="#amenities" class="btn btn-outline-dark btn-lg">Xem tiện nghi</a>
                         </div>
-
                     </div>
-
-                    <div class="col-lg-6">
-
-                        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
-                            class="img-fluid rounded-4" alt="Room">
-
+                    <div class="col-lg-6 text-center slide-up" style="animation-delay: 0.25s;" data-aos="fade-left" data-aos-duration="900" data-aos-delay="180">
+                        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
+                            class="img-fluid rounded-4" alt="Phòng homestay" loading="lazy">
                     </div>
-
                 </div>
-
             </div>
-
         </section>
-    </section>
 
-    <!-- PHÒNG -->
-    <section>
-        <section class="rooms py-5">
-
+        <section id="rooms" class="rooms py-5" data-aos="fade-up" data-aos-duration="900">
             <div class="container">
-
-                <div class="text-center mb-5">
-
-                    <span class="text-danger fw-bold">
-                        PHÒNG COUPLE
-                    </span>
-
-                    <h2 class="fw-bold mt-2">
-                        Không gian riêng tư cho hai bạn
-                    </h2>
-
-                    <p>
-                        Mỗi căn phòng đều được thiết kế để tạo nên
-                        những khoảnh khắc đáng nhớ.
-                    </p>
-
+                <div class="text-center mb-5 fade-in" style="animation-delay: 0.15s;" data-aos="fade-up" data-aos-delay="120">
+                    <span class="text-danger fw-bold text-uppercase letter-spacing-2">Phòng Couple</span>
+                    <h2 class="fw-bold mt-2">Không gian riêng tư, đầy phong cách</h2>
+                    <p class="mx-auto" style="max-width: 640px; color: #64748b;">Từ phòng balcony đến loft, mỗi thiết kế được chọn lọc để mang tới sự thư giãn và bình yên cho cặp đôi.</p>
                 </div>
 
                 <div class="row g-4">
-
-                    <!-- ROOM 1 -->
-
-                    <div class="col-lg-3">
-
+                    <div class="col-md-6 col-lg-3 slide-up" style="animation-delay: 0.18s;">
                         <div class="room-card">
-
-                            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" class="img-fluid"
-                                alt="">
-
+                            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80" class="img-fluid" alt="Couple Room">
                             <div class="p-3">
-
                                 <h5>Couple Room</h5>
-
-                                <p class="text-muted">
-                                    25m² · 2 người · Queen Bed
-                                </p>
-
-                                <h4 class="price">
-                                    1.100.000đ
-                                </h4>
-
-                                <a href="#" class="btn btn-dark w-100">
-                                    Xem chi tiết
-                                </a>
-
+                                <p class="text-muted">25m² · 2 người · Queen Bed</p>
+                                <h4 class="price">1.100.000đ</h4>
+                                <a href="#booking" class="btn btn-dark w-100">Xem chi tiết</a>
                             </div>
-
                         </div>
-
                     </div>
-
-                    <!-- ROOM 2 -->
-
-                    <div class="col-lg-3">
-
+                    <div class="col-md-6 col-lg-3 slide-up" style="animation-delay: 0.24s;">
                         <div class="room-card">
-
-                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945" class="img-fluid"
-                                alt="">
-
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" class="img-fluid" alt="Couple Balcony">
                             <div class="p-3">
-
                                 <h5>Couple Balcony</h5>
-
-                                <p class="text-muted">
-                                    26m² · 2 người · View núi
-                                </p>
-
-                                <h4 class="price">
-                                    1.250.000đ
-                                </h4>
-
-                                <a href="#" class="btn btn-dark w-100">
-                                    Xem chi tiết
-                                </a>
-
+                                <p class="text-muted">26m² · 2 người · View núi</p>
+                                <h4 class="price">1.250.000đ</h4>
+                                <a href="#booking" class="btn btn-dark w-100">Xem chi tiết</a>
                             </div>
-
                         </div>
-
                     </div>
-
-                    <!-- ROOM 3 -->
-
-                    <div class="col-lg-3">
-
+                    <div class="col-md-6 col-lg-3 slide-up" style="animation-delay: 0.30s;">
                         <div class="room-card">
-
-                            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" class="img-fluid"
-                                alt="">
-
+                            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80" class="img-fluid" alt="City View Room">
                             <div class="p-3">
-
                                 <h5>City View Room</h5>
-
-                                <p class="text-muted">
-                                    28m² · 2 người · View thành phố
-                                </p>
-
-                                <h4 class="price">
-                                    1.200.000đ
-                                </h4>
-
-                                <a href="#" class="btn btn-dark w-100">
-                                    Xem chi tiết
-                                </a>
-
+                                <p class="text-muted">28m² · 2 người · View thành phố</p>
+                                <h4 class="price">1.200.000đ</h4>
+                                <a href="#booking" class="btn btn-dark w-100">Xem chi tiết</a>
                             </div>
-
                         </div>
-
                     </div>
-
-                    <!-- ROOM 4 -->
-
-                    <div class="col-lg-3">
-
+                    <div class="col-md-6 col-lg-3 slide-up" style="animation-delay: 0.36s;">
                         <div class="room-card">
-
-                            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" class="img-fluid"
-                                alt="">
-
+                            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80" class="img-fluid" alt="Couple Loft">
                             <div class="p-3">
-
                                 <h5>Couple Loft</h5>
-
-                                <p class="text-muted">
-                                    35m² · 2 người · Loft
-                                </p>
-
-                                <h4 class="price">
-                                    1.350.000đ
-                                </h4>
-
-                                <a href="#" class="btn btn-dark w-100">
-                                    Xem chi tiết
-                                </a>
-
+                                <p class="text-muted">35m² · 2 người · Loft</p>
+                                <h4 class="price">1.350.000đ</h4>
+                                <a href="#booking" class="btn btn-dark w-100">Xem chi tiết</a>
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </section>
-    </section>
-    <section class="amenities py-5">
 
-        <div class="container">
-
-            <div class="text-center mb-5">
-
-                <h2 class="fw-bold">
-                    Trải nghiệm dành riêng cho hai bạn
-                </h2>
-
-                <p>
-                    Mọi thứ đều được chuẩn bị để kỳ nghỉ trở nên đáng nhớ.
-                </p>
-
-            </div>
-
-            <div class="row text-center g-4">
-
-                <div class="col-md-3">
-                    <div class="feature-box">
-                        <div class="icon">📶</div>
-                        <h5>Wifi tốc độ cao</h5>
+        <section id="amenities" class="amenities py-5 fade-in" style="animation-delay: 0.12s;" data-aos="fade-up" data-aos-duration="900" data-aos-delay="120">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Trải nghiệm dành riêng cho hai bạn</h2>
+                    <p class="mx-auto" style="max-width: 620px; color: #64748b;">Mỗi tiện nghi được chăm chút kỹ lưỡng để gia tăng sự thư thái và sự sang trọng cho kỳ nghỉ của bạn.</p>
+                </div>
+                <div class="row text-center g-4">
+                    <div class="col-sm-6 col-lg-3 slide-up" style="animation-delay: 0.18s;">
+                        <div class="feature-box">
+                            <div class="icon">📶</div>
+                            <h5>Wifi tốc độ cao</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 slide-up" style="animation-delay: 0.24s;">
+                        <div class="feature-box">
+                            <div class="icon">🛁</div>
+                            <h5>Bồn tắm riêng</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 slide-up" style="animation-delay: 0.30s;">
+                        <div class="feature-box">
+                            <div class="icon">🌄</div>
+                            <h5>View cực chill</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 slide-up" style="animation-delay: 0.36s;">
+                        <div class="feature-box">
+                            <div class="icon">☕</div>
+                            <h5>Breakfast miễn phí</h5>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="col-md-3">
-                    <div class="feature-box">
-                        <div class="icon">🛁</div>
-                        <h5>Bồn tắm riêng</h5>
+        <section class="gallery py-5 fade-in" style="animation-delay: 0.14s;" data-aos="fade-up" data-aos-duration="900" data-aos-delay="120">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Những khoảnh khắc đáng nhớ</h2>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-4 slide-up" style="animation-delay: 0.18s;">
+                        <img src="https://picsum.photos/600/600?1" class="gallery-img" alt="Gallery image 1">
+                    </div>
+                    <div class="col-md-4 slide-up" style="animation-delay: 0.24s;">
+                        <img src="https://picsum.photos/600/600?2" class="gallery-img" alt="Gallery image 2">
+                    </div>
+                    <div class="col-md-4 slide-up" style="animation-delay: 0.30s;">
+                        <img src="https://picsum.photos/600/600?3" class="gallery-img" alt="Gallery image 3">
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="col-md-3">
-                    <div class="feature-box">
-                        <div class="icon">🌄</div>
-                        <h5>View cực chill</h5>
+        <section class="reviews py-5 fade-in" style="animation-delay: 0.16s;" data-aos="fade-up" data-aos-duration="900" data-aos-delay="120">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Khách hàng nói gì?</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4 slide-up" style="animation-delay: 0.20s;">
+                        <div class="review-card">
+                            <h5>⭐⭐⭐⭐⭐</h5>
+                            <p>Không gian cực chill, phù hợp couple.</p>
+                            <strong>Minh &amp; Linh</strong>
+                        </div>
+                    </div>
+                    <div class="col-md-4 slide-up" style="animation-delay: 0.26s;">
+                        <div class="review-card">
+                            <h5>⭐⭐⭐⭐⭐</h5>
+                            <p>View đẹp, phòng thơm, rất đáng tiền.</p>
+                            <strong>Huy &amp; Vy</strong>
+                        </div>
+                    </div>
+                    <div class="col-md-4 slide-up" style="animation-delay: 0.32s;">
+                        <div class="review-card">
+                            <h5>⭐⭐⭐⭐⭐</h5>
+                            <p>Chắc chắn sẽ quay lại.</p>
+                            <strong>Tuấn &amp; Trang</strong>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-md-3">
-                    <div class="feature-box">
-                        <div class="icon">☕</div>
-                        <h5>Breakfast miễn phí</h5>
-                    </div>
-                </div>
-
             </div>
+        </section>
 
-        </div>
-
-    </section>
-    <section class="gallery py-5">
-
-        <div class="container">
-
-            <div class="text-center mb-5">
-
-                <h2 class="fw-bold">
-                    Những khoảnh khắc đáng nhớ
-                </h2>
-
+        <section id="booking" class="cta py-5">
+            <div class="container text-center">
+                <h2 class="fw-bold mb-4">Sẵn sàng cho kỳ nghỉ tiếp theo?</h2>
+                <a href="#" class="btn btn-lg btn-danger px-5">Đặt phòng ngay</a>
             </div>
+        </section>
+    </main>
 
-            <div class="row g-3">
-
-                <div class="col-md-4">
-                    <img src="https://picsum.photos/600/600?1" class="gallery-img">
-                </div>
-
-                <div class="col-md-4">
-                    <img src="https://picsum.photos/600/600?2" class="gallery-img">
-                </div>
-
-                <div class="col-md-4">
-                    <img src="https://picsum.photos/600/600?3" class="gallery-img">
-                </div>
-
-            </div>
-
+    <footer id="contact" class="footer py-5" data-aos="fade-up" data-aos-duration="900" data-aos-delay="180">
+        <div class="container text-center">
+            <h4>ChillStay Homestay</h4>
+            <p>Không gian riêng tư dành cho các cặp đôi.</p>
+            <p>📞 0909 999 999</p>
+            <p>📍 Đà Lạt, Lâm Đồng</p>
         </div>
+    </footer>
 
-    </section>
-
-<section class="reviews py-5">
-
-  <div class="container">
-
-    <div class="text-center mb-5">
-
-      <h2 class="fw-bold">
-        Khách hàng nói gì?
-      </h2>
-
-    </div>
-
-    <div class="row g-4">
-
-      <div class="col-md-4">
-
-        <div class="review-card">
-
-          <h5>⭐⭐⭐⭐⭐</h5>
-
-          <p>
-            Không gian cực chill,
-            phù hợp couple.
-          </p>
-
-          <strong>Minh & Linh</strong>
-
-        </div>
-
-      </div>
-
-      <div class="col-md-4">
-
-        <div class="review-card">
-
-          <h5>⭐⭐⭐⭐⭐</h5>
-
-          <p>
-            View đẹp, phòng thơm,
-            rất đáng tiền.
-          </p>
-
-          <strong>Huy & Vy</strong>
-
-        </div>
-
-      </div>
-
-      <div class="col-md-4">
-
-        <div class="review-card">
-
-          <h5>⭐⭐⭐⭐⭐</h5>
-
-          <p>
-            Chắc chắn sẽ quay lại.
-          </p>
-
-          <strong>Tuấn & Trang</strong>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>    
-
-<section class="cta py-5">
-
-  <div class="container text-center">
-
-    <h2 class="fw-bold mb-4">
-      Sẵn sàng cho kỳ nghỉ tiếp theo?
-    </h2>
-
-    <a href="#"
-       class="btn btn-lg btn-danger px-5">
-       Đặt phòng ngay
-    </a>
-
-  </div>
-
-</section>
-
-
-
-    <!-- FOOTER -->
-<footer class="footer py-5">
-
-  <div class="container text-center">
-
-    <h4>ChillStay Homestay</h4>
-
-    <p>
-      Không gian riêng tư dành cho các cặp đôi.
-    </p>
-
-    <p>
-      📞 0909 999 999
-    </p>
-
-    <p>
-      📍 Đà Lạt, Lâm Đồng
-    </p>
-
-  </div>
-
-</footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 900,
+            once: true,
+            offset: 120,
+        });
+    </script>
 </body>
 
 </html>
